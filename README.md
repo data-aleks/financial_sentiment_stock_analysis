@@ -33,8 +33,11 @@ The primary objective was to learn and apply practical sentiment analysis method
 Data
 
 Scraper - contains webscraper used to collect articles from google
+
 Screenshots - screenshots for readme
+
 [financial_sentiment_stock_analysis.ipynb](./financial_sentiment_stock_analysis.ipynb) - main jupiter notebook
+
 README.md - this readme
 
 
