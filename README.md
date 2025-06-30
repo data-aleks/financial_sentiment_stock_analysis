@@ -25,14 +25,16 @@ The primary objective was to learn and apply practical sentiment analysis method
 - Matplotlib & Seaborn (Data visualization)  
 - Statsmodels (for Granger Causality Test)  
 
+## Data Sources
+- **[Google ](https://www.google.com)**
+- **[MarketWatch ](https://www.marketwatch.com/)**
+
 ## Project Structure  
-├── notebooks/
-│ └── stock_sentiment_analysis.ipynb # Main Jupyter Notebook with analysis
-├── data/
-│ ├── raw/ # Raw scraped article data
-│ └── processed/ # Cleaned and aggregated weekly data
-├── README.md # This file
-└── requirements.txt # Project dependencies
+Data
+Scraper
+Screenshots
+stock_sentiment_analysis.ipynb # Main Jupyter Notebook with analysis
+README.md
 
 
 ## Detailed Methodology  
@@ -143,7 +145,7 @@ This matrix shows that weighted_sentiment exhibits the strongest positive linear
 To investigate if sentiment acts as a leading indicator, a Granger Causality test was performed on weighted_sentiment against next_return.
 
 
-![Granger Causality Test: Weighted Sentiment → Next Return]('Screenshots/granger_casuality_test.png')
+![Granger Causality Test: Weighted Sentiment → Next Return]('./Screenshots/actual_vs_predicted.png')
 The plot displays the F-test p-values for various lags, compared against a 0.05 significance threshold. In this test, none of the p-values fell below the threshold, indicating no statistically significant linear Granger-causal relationship from weighted_sentiment to next_return at the tested lags. This suggests that while sentiment might correlate or contribute in non-linear ways, it may not be a direct, simple linear leading indicator.
 
 ## 4. Predictive Modeling: XGBoost Regressor
@@ -187,7 +189,7 @@ print("RMSE:", np.sqrt(mean_squared_error(y_test, preds)))
 
     RMSE: 0.0329
 
-![Actual vs Predicted: next_return (XGBoost Model)]('Screenshots/actual_vs_predicted.png')
+![Actual vs Predicted: next_return (XGBoost Model)]('./Screenshots/actual_vs_predicted.png')
 The XGBoost model achieved an R² of approximately 0.293, indicating that roughly 29.3% of the variance in next_return is explained by our engineered features. The RMSE of 0.033 represents the average magnitude of prediction errors. While stock market prediction is inherently challenging, this positive R² demonstrates that the combined sentiment and financial features do contribute to a meaningful predictive capability.
 
 The visualization of actual vs. predicted values shows the model's ability to capture general trends but also highlights its limitations in predicting extreme fluctuations, a common challenge in volatile financial markets.
