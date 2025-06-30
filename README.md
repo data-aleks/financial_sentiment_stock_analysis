@@ -43,7 +43,7 @@ README.md
 The project initiated by programmatically scraping Google search results for a specific company (e.g., Pfizer) over a defined period. This raw data, primarily unstructured text from article titles, descriptions, and full content, formed the basis of our analysis.
 
 **Key Steps:**  
-- **Web Scraping**: Utilized a Python library (e.g., `requests`, `BeautifulSoup` or `Scrapy`) to collect relevant articles.  
+- **Web Scraping**: Utilized a Python to collect relevant articles.  
 - **Data Cleaning**: Pre-processing involved handling missing values, removing boilerplate text, and ensuring data consistency.  
 
 ### 2. Sentiment Analysis & Feature Engineering  
