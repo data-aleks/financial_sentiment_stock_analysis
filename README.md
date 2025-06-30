@@ -182,7 +182,7 @@ print("R²:", r2_score(y_test, preds))
 print("RMSE:", np.sqrt(mean_squared_error(y_test, preds)))
 ```
 
-# Results & Discussion
+# Results
 ### Model Performance:
 
     R²: 0.2931
